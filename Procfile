@@ -1,1 +1,1 @@
-web: guniorn flaskr:create_app
+web: gunicorn flaskr:create_app --log-file -
