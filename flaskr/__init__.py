@@ -11,11 +11,7 @@ def create_app(test_config=None):
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite')
     )
-    if config('HEROKU'):
-        app.config.from_mapping(
-            SECRET_KEY='dev',
-            DATABASE=config('DATABASE_URL')
-        )
+
     if test_config is None:
         # Load the instance config, if it exists when not testing
         app.config.from_pyfile('config.py', silent=True)
