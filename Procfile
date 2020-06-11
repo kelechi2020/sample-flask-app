@@ -1,0 +1,1 @@
+web: guniorn flaskr:create_app
